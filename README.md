@@ -1,0 +1,1 @@
+Ejercicio básico para aprender a usar git
