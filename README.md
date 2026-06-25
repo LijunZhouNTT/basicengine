@@ -1,5 +1,9 @@
 Ejercicio básico para aprender a usar git
 
+### Ejecutar código en colab
+
+Esta rama contiene ejemplos para ejecutar los códigos de ejemplo en Colab, para ello es necesario añadir en una misma carpeta de google drive los archivos colab_run_engine.ipynb, colab_app_example.py, colab_funciones_example.py y test_app_example.py
+
 ### Estructura básica del repositorio.
 
 ```mermaid
