@@ -33,8 +33,8 @@ class ClaseEngine():
         self.df_customers = self.dataproc.read().parquet(self.ruta2)
         self.df_bajas = self.dataproc.read().parquet(self.ruta3)
 
-        self.planuno_2020 = self.df_plauno.filter(f.col("date_alta") < "2021-01-01")
-        self.planuno_2021 = self.df_plauno.filter(f.col("date_alta") >= "2021-01-01")
+        self.planuno_2020 = self.df_plauno.filter(F.col("date_alta") < "2021-01-01")
+        self.planuno_2021 = self.df_plauno.filter(F.col("date_alta") >= "2021-01-01")
     
     def get_base(self):
         df_plauno = self.df_plauno
@@ -58,7 +58,7 @@ class ClaseEngine():
                                  F.col("fecha_alta_cliente").cast("date")))
             .withColumn(
                 "antiguedad",
-                when(F.col("diferencia_dias") < 183, "< 6 meses")
+                F.when(F.col("diferencia_dias") < 183, "< 6 meses")
                 .when(F.col("diferencia_dias") < 365, "6-12 meses")
                 .when(F.col("diferencia_dias") < 730, "1-2 años")
                 .when(F.col("diferencia_dias") < 1825, "2-5 años")
