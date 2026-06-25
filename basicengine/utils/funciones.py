@@ -40,7 +40,7 @@ class ClaseEngine():
         df_plauno = self.df_plauno
 
         self.base = (df_plauno
-            .filter((F.col("business_area_id") == "BA03") & (F.col("planuno_quadrant_name") == "Básico"))
+            .filter((F.col("business_area_id") == "BA04") & (F.col("planuno_quadrant_name") == "Básico"))
             .select("customer_id").distinct()
         )
 
