@@ -103,7 +103,7 @@ class ClaseEngine():
 
     def get_union(self):
         df_antiguedad = self.df_antiguedad
-        planuno_2021_enriq = self.planuno_2021_enriq
+        planuno_2021_enriq = self..planuno_2021_enriq
         df_bajas = self.df_bajas
 
         self.df = (df_antiguedad.join(planuno_2021_enriq, "customer_id", "left")
