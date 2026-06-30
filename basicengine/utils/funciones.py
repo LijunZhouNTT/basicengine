@@ -52,7 +52,7 @@ class ClaseEngine():
             .join(df_customers.select("customer_id",
                                       F.col("cust_entry_date").alias("fecha_alta_cliente")),
                   "customer_id", "left")
-            .withColumn("hoy", F.lit("2022-01-30"))
+            .withColumn("hoy", F.lit("2022-06-25"))
             .withColumn("diferencia_dias",
                         F.datediff(F.col("hoy").cast("date"),
                                  F.col("fecha_alta_cliente").cast("date")))
